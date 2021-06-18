@@ -1,0 +1,7 @@
+postgres://afwohebmqwbysk:42b55f34a953f767679f42194d74c7d7ea016450dfd1283b9b740a1789dae06a@ec2-54-158-232-223.compute-1.amazonaws.com:5432/dec02guo9tabm6
+
+user=afwohebmqwbysk
+pass=42b55f34a953f767679f42194d74c7d7ea016450dfd1283b9b740a1789dae06a
+host=ec2-54-158-232-223.compute-1.amazonaws.com
+port=5432
+db=dec02guo9tabm6

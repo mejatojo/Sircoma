@@ -22,6 +22,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+  @yield('style')
 </head>
 
 <body>
@@ -29,6 +30,7 @@
   <div class="section" style="margin-top: 2cm;">
     @yield('content') 
   </div>
+  @include('app.footer')
     <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -37,10 +39,10 @@
   <script src="{{asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
   <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
   <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
-
+  @yield('script')
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
-  @include('app.footer')
+  
 </body>
 
 </html>

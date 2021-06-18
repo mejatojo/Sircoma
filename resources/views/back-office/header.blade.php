@@ -104,12 +104,41 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Produits
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/product/create" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Ajouter</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/product" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Liste</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item">
                 <a href="/langues" class="nav-link">
                   <i class="fa fa-book nav-icon"></i>
                   <p>Langues</p>
                 </a>
               </li>
+           <li class="nav-item">
+                <a href="/partenaire" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p>Partenaires</p>
+                </a>
+          </li>
           
         </ul>
       </nav>

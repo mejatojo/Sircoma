@@ -32,7 +32,7 @@ class categorieController extends Controller
         return redirect()->back()->with($notif);
     }
     public function index()
-    {
+    { 
         $langues=Langue::all();
         $categories=Categorie::all();
         $categories_langue=categories_langue::all();

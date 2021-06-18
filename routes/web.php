@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.slide');
-}); 
+Route::get('/', 'pageController@index');
+Route::resource('partenaire','partenaireController')->middleware('auth'); 
+Route::resource('product_controller','productLangueController')->middleware('auth');
 Route::get('abouts','aboutController@list');
 Route::get('categories','categorieController@list');
+Route::get('products/{slug}','productController@show');
 Route::resource('about','aboutController')->middleware('auth'); 
 Route::resource('product','productController')->middleware('auth');
 Route::resource('category','categorieController')->middleware('auth'); 

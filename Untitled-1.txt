@@ -1,0 +1,6 @@
+postgres://afwohebmqwbysk:42b55f34a953f767679f42194d74c7d7ea016450dfd1283b9b740a1789dae06a@ec2-54-158-232-223.compute-1.amazonaws.com:5432/dec02guo9tabm6
+
+postgres://uenlesxonqdsev:bc4d30eab5897717caa1a03fd5bd081f8ac715101f4a990918a449f8b7634905@ec2-50-17-255-120.compute-1.amazonaws.com:5432/de0ipknkjm0ffc
+
+
+postgres://gxsdfybfxrbltf:499530a1f74331e2ecd1ca8e09991590b19336d0bc833d9ad08ec63aa5b6a724@ec2-34-202-54-225.compute-1.amazonaws.com:5432/dcravp9tjr77f7

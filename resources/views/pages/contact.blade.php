@@ -1,37 +1,34 @@
-<!-- ======= Featured Services Section ======= -->
+@extends('app.includePage')
+@section('content')
 <section id="featured-services" class="featured-services section-bg">
+      <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
       <div class="container">
-
-        <div class="row no-gutters">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-google-map"></i></div>
-            <iframe frameborder="0" scrolling="no"  src="https://maps.google.com/maps?q=Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Rue de I Ambassade du Senegal, Nouakchott, Mauritanie"></iframe>
-          </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon">
-                <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-              </div>
-              <center>
-              <h4 class="title"><a href="">La Sircoma (société d’importation de représentatio et de commerce en Mauritanie) est créée en 1973 et spécialisée 
-                dans le commerce du matériels et matériaux de constructions.</a></h4>
-              </center>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <center>
-              <div class="icon"><i class="icofont-envelope"></i></div>
-              <h4 class="title"><a href="">Zone Industrielle Elmina<br>
-                Téléphone : +222 45 25 26 11<br>
-                4966 Nouakchott<br>
-                www.sircoma.mr</a></h4>
-              </center>
-            </div>
-          </div>
-        </div>
+      <span hidden>{{$pointdevente=config('site_vars.sections')::where('reference','Point de vente')->where('id_lang',$lang)->get()}}</span>
+      <div class="section-title">
+        @if (isset($pointdevente[0]->titre))
+        <h2>{{$pointdevente[0]->titre}}</h2>
+        @endif
+        @if (isset($pointdevente[0]->paragraphe))
+        <p style="font-size:22px">
+          {{$pointdevente[0]->paragraphe}}
+        </p>
+        @endif
+      </div>
+      <div class="elementor-custom-embed"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=SIRCOMA%20%D8%B3%D9%8A%D8%B1%D9%83%D9%88%D9%85%D8%A7%2C%20Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="SIRCOMA سيركوما, Rue de I Ambassade du Senegal, Nouakchott, Mauritanie" width="100%"></iframe></div>	
+        <br>	
+          @foreach($points as $point)
+          @if($point->id_lang==$lang)
+          <p><i class="icofont-google-map"></i> {{$point->point}}</p>
+          @endif
+          @endforeach
+          <br>
 
       </div>
     </section> <!--End Featured Services Section -->
+    @endsection
+    @section('script')
+    <script>
+      document.querySelector('li.active').classList.remove('active')
+      document.querySelectorAll('.nav-menu li')[4].classList.add('active')
+    </script>
+    @endsection

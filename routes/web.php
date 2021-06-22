@@ -12,14 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/contact', 'pageController@contact');
 Route::get('/', 'pageController@index');
-Route::resource('partenaire','partenaireController')->middleware('auth'); 
+Route::resource('partenaire','partenaireController')->middleware('auth');
+Route::resource('point','pointsController')->middleware('auth'); 
 Route::resource('product_controller','productLangueController')->middleware('auth');
 Route::get('abouts','aboutController@list');
+Route::get('clients','clientController@list');
 Route::get('categories','categorieController@list');
 Route::get('products/{slug}','productController@show');
-Route::resource('about','aboutController')->middleware('auth'); 
+Route::resource('menu','menuController')->middleware('auth');
+Route::resource('section','sectionController')->middleware('auth');
+Route::resource('about','aboutController')->middleware('auth');
+Route::resource('client','clientController')->middleware('auth'); 
 Route::resource('product','productController')->middleware('auth');
 Route::resource('category','categorieController')->middleware('auth'); 
 Route::post('/categories/store','categorieController@modifierLangue')->middleware('auth');

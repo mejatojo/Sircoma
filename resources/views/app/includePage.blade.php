@@ -19,6 +19,7 @@
   <link href="{{asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
@@ -31,6 +32,7 @@
     @yield('content') 
   </div>
   @include('app.footer')
+  
     <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -41,7 +43,7 @@
   <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
   @yield('script')
   <!-- Template Main JS File -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
+  <!-- <script src="{{asset('assets/js/main.js')}}"></script> -->
   
 </body>
 

@@ -139,7 +139,30 @@
                   <p>Partenaires</p>
                 </a>
           </li>
-          
+          <li class="nav-item">
+                <a href="/client" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p>Clients</p>
+                </a>
+          </li>
+          <li class="nav-item">
+                <a href="/menu" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p>Menus</p>
+                </a>
+          </li>
+          <li class="nav-item">
+                <a href="/section" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p>Sections</p>
+                </a>
+          </li>
+          <li class="nav-item">
+                <a href="/point" class="nav-link">
+                  <i class="fa fa-book nav-icon"></i>
+                  <p>Points de vente</p>
+                </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

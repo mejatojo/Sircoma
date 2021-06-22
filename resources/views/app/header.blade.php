@@ -1,5 +1,6 @@
 
 <span hidden>{{$langues=config('site_vars.langues')::all()}}</span>
+<span hidden>{{$menus=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->get()}}</span>
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
@@ -9,11 +10,35 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">Accueil</a></li>
-          <li><a href="/abouts">A propos de nous</a></li>
-          <li><a href="/categories">Produits</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="drop-down"><a href="">Langues</a>
+          <li class="active"><a href="/">
+          @if (isset($menus[0]->libelle))
+          {{$menus[0]->libelle}}
+          @endif
+        </a></li>
+          <li><a href="/abouts">
+          @if (isset($menus[1]->libelle))
+          {{$menus[1]->libelle}}
+          @endif
+        </a></li>
+          <li><a href="/categories">
+          @if (isset($menus[2]->libelle))
+          {{$menus[2]->libelle}}
+          @endif
+        </a></li>
+          <li><a href="/clients">
+          @if (isset($menus[3]->libelle))
+          {{$menus[3]->libelle}}
+          @endif 
+        </a></li>
+          <li><a href="/contact">
+          @if (isset($menus[4]->libelle))
+          {{$menus[4]->libelle}}
+          @endif
+        </a></li>
+          <li class="drop-down"><a href="">
+          @if (isset($menus[5]->libelle))
+          {{$menus[5]->libelle}}
+          @endif</a>
             <ul>
               @foreach($langues as $langue)
               <li><a href="/changeLang/{{$langue->lang}}">{{$langue->lang}}</a></li>

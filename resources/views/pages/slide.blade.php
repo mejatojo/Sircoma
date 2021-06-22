@@ -3,7 +3,7 @@
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
 <section id="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
+ 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
@@ -44,22 +44,40 @@
   </section><!-- End Hero -->
   <section class="about">
       <div class="container">
-
+        <span hidden>{{$presentations=config('site_vars.sections')::where('reference','Présentation')->where('id_lang',$lang)->get()}}</span>
         <div class="section-title">
-          <p style="font-size:22px">SIRCOMA<br>Société d’Importation de Représentations et de Commerce en<br>Mauritanie.</p>
+          @if (isset($presentations[0]->titre))
+          <h2>{{$presentations[0]->titre}}</h2>
+          @endif
+          @if (isset($presentations[0]->paragraphe))
+          <p style="font-size:22px">
+            {{$presentations[0]->paragraphe}}
+          </p>
+          @endif
         </div>
       </div>
     </section>
   <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title">
-          <h2>Nos Marques</h2>
-          <p style="font-size:22px">Nous nous engageons à disponibiliser sur le marché des produits avec le meilleur rapport qualité/
-             prix. <br> A cet effet, nous représentons de grandes marques de prestiges</p>
-        </div>
+      <span hidden>{{$Marques=config('site_vars.sections')::where('reference','Marques')->where('id_lang',$lang)->get()}}</span>
+      <div class="section-title">
+        @if (isset($Marques[0]->titre))
+        <h2>{{$Marques[0]->titre}}</h2>
+        @endif
+        @if (isset($Marques[0]->paragraphe))
+        <p style="font-size:22px">
+          {{$Marques[0]->paragraphe}}
+        </p>
+        @endif
+      </div>
       </div>
     </section>
   @include('pages.partenaries')
-  @include('pages.contact')
 @endsection
+    @section('script')
+    <script>
+      document.querySelector('li.active').classList.remove('active')
+      document.querySelectorAll('.nav-menu li')[3].classList.add('active')
+    </script>
+    @endsection

@@ -7,10 +7,6 @@
 <!-- ======= Nos Produits Section ======= -->
 <section id="produits" class="portfolio">
       <div class="container">
-
-        <div class="section-title">
-          <h2>Nos Produits</h2>
-        </div>
         <div class="row portfolio-container">
           @foreach($products as $product)
           @if($product->id_lang==$lang)
@@ -37,9 +33,9 @@
                                   <img src="{{asset('storage/'.$product->photo_product)}}" class="img-fluid" alt=""  style="object-fit: cover;">
                               </div>  
                               <div class="col-7">
-                                <h1>{{$product->name_product}}</h1>
+                                <h2>{{$product->name_product}}</h2>
                                 <hr>
-                                <h4>{{$product->description_product}}</h4>
+                                <p>{{$product->description_product}}</p>
                               </div>
                           </div>
                         </div>
@@ -92,3 +88,9 @@
 
       </div>
     </section>End Portfolio Section -->
+    @section('script')
+    <script>
+      document.querySelector('li.active').classList.remove('active')
+      document.querySelectorAll('.nav-menu li')[2].classList.add('active')
+    </script>
+    @endsection

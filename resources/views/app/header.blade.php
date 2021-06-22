@@ -10,26 +10,26 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">
+          <li><a href="/">
           @if (isset($menus[0]->libelle))
           {{$menus[0]->libelle}}
           @endif
         </a></li>
-        <li><a href="/categories">
-          @if (isset($menus[2]->libelle))
-          {{$menus[2]->libelle}}
+        <li><a href="/abouts">
+          @if (isset($menus[1]->libelle))
+          {{$menus[1]->libelle}}
           @endif
         </a></li>
           
           
-          <li><a href="/clients">
-          @if (isset($menus[3]->libelle))
-          {{$menus[3]->libelle}}
+          <li><a href="/categories">
+          @if (isset($menus[2]->libelle))
+          {{$menus[2]->libelle}}
           @endif 
         </a></li>
-        <li><a href="/abouts">
-          @if (isset($menus[1]->libelle))
-          {{$menus[1]->libelle}}
+        <li><a href="/clients">
+          @if (isset($menus[3]->libelle))
+          {{$menus[3]->libelle}}
           @endif
         </a></li>
           <li><a href="/contact">

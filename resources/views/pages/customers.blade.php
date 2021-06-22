@@ -33,7 +33,6 @@
     @endsection
     @section('script')
     <script>
-      document.querySelector('li.active').classList.remove('active')
       document.querySelectorAll('.nav-menu li')[3].classList.add('active')
     </script>
     @endsection

@@ -77,7 +77,6 @@
 @endsection
     @section('script')
     <script>
-      document.querySelector('li.active').classList.remove('active')
       document.querySelectorAll('.nav-menu li')[0].classList.add('active')
     </script>
     @endsection

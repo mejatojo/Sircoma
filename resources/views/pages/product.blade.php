@@ -90,7 +90,6 @@
     </section>End Portfolio Section -->
     @section('script')
     <script>
-      document.querySelector('li.active').classList.remove('active')
       document.querySelectorAll('.nav-menu li')[2].classList.add('active')
     </script>
     @endsection

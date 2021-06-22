@@ -15,20 +15,22 @@
           {{$menus[0]->libelle}}
           @endif
         </a></li>
-          <li><a href="/abouts">
-          @if (isset($menus[1]->libelle))
-          {{$menus[1]->libelle}}
-          @endif
-        </a></li>
-          <li><a href="/categories">
+        <li><a href="/categories">
           @if (isset($menus[2]->libelle))
           {{$menus[2]->libelle}}
           @endif
         </a></li>
+          
+          
           <li><a href="/clients">
           @if (isset($menus[3]->libelle))
           {{$menus[3]->libelle}}
           @endif 
+        </a></li>
+        <li><a href="/abouts">
+          @if (isset($menus[1]->libelle))
+          {{$menus[1]->libelle}}
+          @endif
         </a></li>
           <li><a href="/contact">
           @if (isset($menus[4]->libelle))

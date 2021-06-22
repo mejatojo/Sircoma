@@ -1,8 +1,8 @@
 
 <span hidden>{{$langues=config('site_vars.langues')::all()}}</span>
-<span hidden>{{$menus=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->get()}}</span>
+<span hidden>{{$menus=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->orderBy('menus.created_at','asc')->get()}}</span>
 <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+    <div class="container d-flex align-items-center"> 
 
       <!--<h1 class="logo mr-auto"><a href="index.html">Green</a></h1>
        Uncomment below if you prefer to use an image logo -->

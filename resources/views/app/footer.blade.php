@@ -31,7 +31,7 @@
                   <div class="widget widget_information">
                   <span hidden>{{$contact=config('site_vars.sections')::where('reference','Contact')->where('id_lang',$lang)->get()}}</span>
                      <h2 class="widget-title"><span>
-                         @if isset($contact[0])
+                         @if (isset($contact[0]))
                          {{$contact[0]->titre}}
                         @endif</span></h2>
                      <ul>

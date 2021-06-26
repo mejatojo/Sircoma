@@ -50,13 +50,11 @@
                                     <option value="Présentation">Présentation</option>
                                     <option value="Marques">Marques</option>
                                     <option value="Partenaires">Partenaires</option>
-                                    <option value="A propos">A propos</option>
-                                    <option value="Produits">Produits</option>
-                                    <option value="Clients">Clients</option>
                                     <option value="Point de vente">Point de vente</option>
-                                    <option value="Personne à contacter">Personne à contacter</option>
+                                    <option value="Contactez-nous">Contactez-nous</option>
                                     <option value="Historiques">Historiques</option>  
                                     <option value="Contact">Contact</option>
+                                    <option value="Map">Map</option>
                               </select>
                             </div>
                               <div style="float:right">
@@ -171,4 +169,5 @@
     });
   });
 </script>
+
 @endsection

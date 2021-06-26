@@ -1,65 +1,67 @@
-<section id="featured-services" class="featured-services section-bg">
-  <div class="container-fluid">
-    <div class="row no-gutters">
-          <div class="col-md-3 col-sm-12">
-            <br>
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-google-map"></i></div>
-            <iframe frameborder="0" scrolling="no"  src="https://maps.google.com/maps?q=Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Rue de I Ambassade du Senegal, Nouakchott, Mauritanie" width="100%"></iframe>
-          </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="icon-box">
-              <center> 
-              <a href="index.html" class="logo mr-auto"><img src="{{asset('assets/img/logo.png')}}" alt="" class="img-fluid"></a><br><br>
-              <p class="title">
-              <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>  
-              <span hidden>{{$historiques=config('site_vars.sections')::where('reference','Historiques')->where('id_lang',$lang)->get()}}</span>
-                @if (isset($historiques[0]->titre))
-                <h2>{{$historiques[0]->titre}}</h2>
-                @endif
-                @if (isset($historiques[0]->paragraphe))
-                <p>
-                  {{$historiques[0]->paragraphe}}
-                </p>
-                @endif
-            </p>
-              </center>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-12">
-            <div class="icon-box">
-              <br>
-              <center>
-              <div class="icon"><i class="icofont-envelope"></i></div>
-              <p class="title">
-              <span hidden>{{$contact=config('site_vars.sections')::where('reference','Contact')->where('id_lang',$lang)->get()}}</span>
-                @if (isset($contact[0]->paragraphe))
-                <p>
-                  {{$contact[0]->paragraphe}}
-                </p>
-                @endif
-              </p>
-              </center>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+             
 <footer id="footer">
-    <div class="container">
-      <h3>Sircoma</h3>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div> 
-      <div class="copyright">
-        &copy; 2021 <strong><span>Sircoma</span></strong>. All Rights Reserved.
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+         <div id="footer-widgets" class="container style-1">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="widget widget_text">
+                  <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>  
+                  <span hidden>{{$historiques=config('site_vars.sections')::where('reference','Historiques')->where('id_lang',$lang)->get()}}</span>
+                     <h2 class="widget-title"><span>{{$historiques[0]->titre}}</span></h2>
+                     <div class="textwidget">
+                        <a class="navbar-brand" href="/"><img src="{{asset('images/logo-2.png')}}" alt="image"></a>
+                        <p><?php echo $historiques[0]->paragraphe;?></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="widget widget_links">
+                  <span hidden>{{$maps=config('site_vars.sections')::where('reference','Map')->where('id_lang',$lang)->get()}}</span>
+                     <h2 class="widget-title"><span>{{$maps[0]->titre}}</span></h2>
+                     <iframe frameborder="0" scrolling="no"  src="https://maps.google.com/maps?q=Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Rue de I Ambassade du Senegal, Nouakchott, Mauritanie" width="100%"></iframe>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="widget widget_information">
+                  <span hidden>{{$contact=config('site_vars.sections')::where('reference','Contact')->where('id_lang',$lang)->get()}}</span>
+                     <h2 class="widget-title"><span>{{$contact[0]->titre}}</span></h2>
+                     <ul>
+                        <li class="address clearfix">
+                        <?php echo $contact[0]->paragraphe;?>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="widget widget_socials">
+                     <div class="socials">
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-dribbble"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="bottom" class="clearfix style-1">
+            <div class="container">
+               <div id="bottom-bar-inner" class="wprt-container">
+                  <div class="bottom-bar-inner-wrap">
+                     <div class="bottom-bar-content">
+                        <div id="copyright">All Rights Reserved. cadortech © 2021 </div>
+                        <!-- /#copyright -->
+                     </div>
+                     <!-- /.bottom-bar-content -->
+                     <!-- <div class="bottom-bar-menu pull-right">
+                        <ul class="bottom-nav">
+                           <li><a href="#/">HISTORY</a></li>
+                           <li><a href="#/">FAQ</a></li>
+                           <li><a href="#/">EVENTS</a></li>
+                        </ul>
+                     </div> -->
+                     <!-- /.bottom-bar-menu -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   

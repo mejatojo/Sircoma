@@ -92,7 +92,7 @@
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
 
-  $(window).on('scroll', function() {
+  $(window).on('click', function() {
     var cur_pos = $(this).scrollTop() + 200;
 
     nav_sections.each(function() {

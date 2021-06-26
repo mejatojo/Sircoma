@@ -1,7 +1,7 @@
 @extends('app.includePage')
 @section('content')
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
-<div class="pd-top-80 pd-bottom-50" id="grid">
+<div class="pd-top-80 pd-bottom-50" id="grid" style="margin-top:2cm;margin-bottom:2cm;">
       <div class="container">
       <span hidden>{{$ProduitsLang=config('site_vars.sections')::where('reference','Produits')->where('id_lang',$lang)->get()}}</span>
       <div class="section-title">
@@ -14,14 +14,16 @@
         </p>
         @endif
       </div>
-          <div class="row">
+        <div class="row text-center about-row">
             @foreach($categories as $category)
               @if($category->id_lang==$lang)
-              <div class="col-lg-3 col-md-4  col-6 link" link="{{$category->slug_category}}" style="cursor:pointer">
-                  <div class="single-post-wrap style-overlay">
-                      <div class="thumb">
-                          <img src="{{asset('storage/'.$category->photo)}}" alt="img"   style="height:200px" width="100%">
-                          <a class="tag-base tag-light-green" href="">{{$category->name_category}}</a>
+              <div  class="col-md-4 col-sm-12 col-xs-12" style="cursor:pointer">
+                  <div class="row">
+                     <div class="service-widget link" link="{{$category->slug_category}}" style="box-shadow: 0 15px 25px -10px #000;margin-bottom:1cm;margin-right:1cm;">
+                        <div class="post-media wow fadeIn"  >
+                          <img src="{{asset('storage/'.$category->photo)}}"  style="height:7cm" alt="img"   class="img-rounded">
+                        </div>
+                        <h3><a class="tag-base tag-light-green">{{$category->name_category}}</a></h3>
                       </div>                      
                   </div>
               </div>
@@ -33,7 +35,7 @@
     @endsection
     @section('script')
     <script>
-      document.querySelectorAll('.nav-menu li')[2].classList.add('active')
+      document.querySelectorAll('.nav li')[2].classList.add('active')
         var links = document.querySelectorAll('.link')
         for(i=0;i<links.length;i++)
         {

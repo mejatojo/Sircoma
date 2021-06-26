@@ -9,42 +9,80 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Site Icons -->
 
-  <!-- Vendor CSS Files -->
-  <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{asset('assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
-  <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
-  <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+<link rel="shortcut icon" href="{{asset('images/fevicon.ico.png')}}" type="image/x-icon" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+<!-- Site CSS -->
+<link rel="stylesheet" href="{{asset('style.css')}}">
+<!-- Colors CSS -->
+<link rel="stylesheet" href="{{asset('css/colors.css')}}">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="{{asset('css/versions.css')}}">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+<!-- building CSS -->
+<link rel="stylesheet" href="{{asset('css/building.css')}}">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  <!-- Template Main CSS File -->
-  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
   @yield('style')
 </head>
 
-<body>
+<body class="building_version" data-spy="scroll" data-target=".header">
   @include('app.header')
-  <div class="section" style="margin-top: 2cm;">
     @yield('content') 
-  </div>
   @include('app.footer')
   
     <!-- Vendor JS Files -->
-  <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
-  <script src="{{asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <!-- ALL JS FILES -->
+  <script src="{{asset('js/all.js')}}"></script>
+  <!-- ALL PLUGINS -->
+  <script src="{{asset('js/custom.js')}}"></script>
+  <script src="{{asset('js/portfolio.js')}}"></script>
+  <script src="{{asset('js/hoverdir.js')}}"></script>
+  <script src="https://use.fontawesome.com/3e6fb917ce.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
   @yield('script')
   <!-- Template Main JS File -->
-  <!-- <script src="{{asset('assets/js/main.js')}}"></script> -->
-  
+  <script>
+function myMap() {
+  var location={lat:18.102820,lng:-15.975120};
+var map = new google.maps.Map(document.getElementById("googleMap2"),{
+  zoom:4,
+  center:location
+});
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiHKfk6jcSQN0vmSTZRroVe_YCIhFkfEI&callback=myMap"></script>
 </body>
 
 </html>

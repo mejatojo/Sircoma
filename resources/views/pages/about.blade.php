@@ -3,7 +3,7 @@
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
 
 
-    <div id="about" class="section wb" style="margin-top:1.3cm;">
+    <div id="about" class="section wb" style="margin-top:2cm;">
         <div class="container">
             <div class="row">
             @foreach($abouts as $about)

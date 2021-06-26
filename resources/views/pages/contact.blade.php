@@ -36,7 +36,7 @@
                         <ul>
                         <li class="address clearfix">
                         @if (isset($contact[0]->paragraphe))
-                          {{$contact[0]->paragraphe}}
+                          <?php echo $contact[0]->paragraphe;?>
                         @endif
                         </li>
                         </ul>

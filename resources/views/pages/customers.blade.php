@@ -18,7 +18,7 @@
       
         <div class="row">
           @foreach($clients as $client)
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 align-items-stretch" >
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 align-items-stretch" style="text-align:center">
             <div class="icon-box iconbox-teal">
               <div class="icon">
                 <img src="{{asset('/storage/'.$client->image)}}">

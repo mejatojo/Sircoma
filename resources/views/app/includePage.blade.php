@@ -72,17 +72,8 @@
   <script src="assets/js/main.js"></script>
   @yield('script')
   <!-- Template Main JS File -->
-  <script>
-function myMap() {
-  var location={lat:18.102820,lng:-15.975120};
-var map = new google.maps.Map(document.getElementById("googleMap2"),{
-  zoom:4,
-  center:location
-});
-}
-</script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiHKfk6jcSQN0vmSTZRroVe_YCIhFkfEI&callback=myMap"></script>
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 @section('content')
 
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
-    <div id="projects" class="section" style="margin-top:1.5cm;">
+    <div id="projects" class="section" style="margin-top:2.2cm;">
          <div class="container">
             <div class="row">
                 @foreach($products as $product)
@@ -46,6 +46,6 @@
     @endsection
     @section('script')
     <script>
-      document.querySelectorAll('.nav li')[2].classList.add('active')
+      document.querySelector('.nav li')[2].classList.add('active')
     </script>
     @endsection

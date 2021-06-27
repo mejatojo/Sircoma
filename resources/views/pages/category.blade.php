@@ -1,7 +1,7 @@
 @extends('app.includePage')
 @section('content')
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
-<div class="pd-top-80 pd-bottom-50" id="grid" style="margin-top:2cm;margin-bottom:2cm;">
+<div class="pd-top-80 pd-bottom-50" id="grid" style="margin-bottom:2cm;">
       <div class="container">
       <span hidden>{{$ProduitsLang=config('site_vars.sections')::where('reference','Produits')->where('id_lang',$lang)->get()}}</span>
       <div class="section-title">

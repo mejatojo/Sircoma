@@ -42,7 +42,6 @@
 
 body.building_version .header_style_01 {
     background-color: rgba(0, 0, 0, .2);
-    position: absolute;
     top: 0;
     padding-top: 0px !important;
     padding-bottom: 15px !important;

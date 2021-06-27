@@ -1,6 +1,6 @@
 @extends('app.includePage')
 @section('content')
-<section id="featured-services" class="featured-services section-bg"  style="margin-top:3.5cm">
+<section id="featured-services" class="featured-services section-bg" >
       <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
       <div class="container">
       <div id="googleMap"  style="width:100%;height:200px"></div>	

@@ -33,12 +33,23 @@
                                 <input type="text" class="form-control" name="libelle">
                             </div>
                             <div class="form-group">
-                                <label>Langue</label>
+                                <label>Langue</label> 
                                 <select type="text" class="form-control" name="id_lang">
                                     @foreach($langues as $langue)
                                     <option value="{{$langue->id}}">{{$langue->lang}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group">     
+                                <label>Page</label>
+                                <select type="text" class="form-control" name="reference">
+                                    <option value="Accueil">Accueil</option>
+                                    <option value="A propos">A propos</option>
+                                    <option value="Produits">Produits</option>
+                                    <option value="Clients">Clients</option>
+                                    <option value="Contact">Contact</option>
+                                    <option value="Langue">Langue</option>
+                              </select>
                             </div>
                               <div style="float:right">
                                   <button type="submit" class="btn btn-primary">Ajouter</button>
@@ -58,6 +69,7 @@
             <tr>
                 <th>Libellé</th>
                 <th>Langue</th>
+                <th>Page</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -69,6 +81,9 @@
                 </td>
                 <td>
                     {{$menu->lang}}
+                </td>
+                <td>
+                    {{$menu->reference}}
                 </td>
                 <td>
                               <span style="float:right">

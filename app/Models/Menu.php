@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    protected $fillable=['libelle','id_lang'];
+    protected $fillable=['libelle','id_lang','reference'];
 }

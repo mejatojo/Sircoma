@@ -1,6 +1,6 @@
 @extends('app.includePage')
 @section('content')
-<section id="client" class="services" style="margin-top:1.5cm">
+<section id="client" class="services">
       <div class="container">
       <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>;
 

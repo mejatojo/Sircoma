@@ -17,7 +17,8 @@ class CreateMenusTable extends Migration
             $table->id();
             $table->string('libelle');
             $table->unsignedBigInteger('id_lang');
-            $table->foreign('id_lang')->references('id')->on('langues');
+            $table->foreign('id_lang')->references('id')->on('langues'); 
+            $table->string('reference');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
 @section('content')
 
 <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
-    <div id="projects" class="section" style="margin-top:2.2cm;">
+    <div id="projects" class="section">
          <div class="container">
             <div class="row">
                 @foreach($products as $product)

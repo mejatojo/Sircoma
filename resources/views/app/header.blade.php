@@ -1,6 +1,6 @@
 
 <span hidden>{{$langues=config('site_vars.langues')::all()}}</span>
-<span hidden>{{$menus=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->orderBy('menus.created_at','asc')->get()}}</span>
+
 
     <!-- LOADER -->
     <div id="preloader">
@@ -46,35 +46,41 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a data-scroll href="/">
-                        @if (isset($menus[0]->libelle))
-                        {{$menus[0]->libelle}}
+                        <span hidden>{{$home=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Accueil')->get()}}</span>
+                        @if (isset($home[0]->libelle))
+                        {{$home[0]->libelle}}
                         @endif
                         </a></li>
                         <li><a data-scroll href="/abouts">
-                        @if (isset($menus[1]->libelle))
-                        {{$menus[1]->libelle}}
+                        <span hidden>{{$about=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','A propos')->get()}}</span>
+                        @if (isset($about[0]->libelle))
+                        {{$about[0]->libelle}}
                         @endif
                         </a></li>
                         <li><a data-scroll href="/categories">
-                        @if (isset($menus[2]->libelle))
-                        {{$menus[2]->libelle}}
+                        <span hidden>{{$prod=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Produits')->get()}}</span>
+                        @if (isset($prod[0]->libelle))
+                        {{$prod[0]->libelle}}
                         @endif
                         </a></li>
                         <li><a data-scroll href="/clients">
-                        @if (isset($menus[3]->libelle))
-                        {{$menus[3]->libelle}}
+                        <span hidden>{{$Clients=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Clients')->get()}}</span>
+                        @if (isset($Clients[0]->libelle))
+                        {{$Clients[0]->libelle}}
                         @endif
                         </a></li>
                         <li><a data-scroll href="/contact">
-                        @if (isset($menus[4]->libelle))
-                        {{$menus[4]->libelle}}
+                        <span hidden>{{$Contact=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Contact')->get()}}</span>
+                        @if (isset($Contact[0]->libelle))
+                        {{$Contact[0]->libelle}}
                         @endif
                         </a></li>
                         <li><a data-scroll  class="dropdown">
-                        @if (isset($menus[5]->libelle))
-                        {{$menus[5]->libelle}}
+                        <span hidden>{{$Langue=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Langue')->get()}}</span>
+                        @if (isset($Langue[0]->libelle))
+                        {{$Langue[0]->libelle}}
                         @endif
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" style="text-align:center">
                                 @foreach($langues as $langue)
                                 <p class="link" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer">{{$langue->lang}}</p>
                                 @endforeach

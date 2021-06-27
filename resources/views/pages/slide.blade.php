@@ -22,7 +22,6 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
       </ol>
   
       <!-- Wrapper for slides -->
@@ -34,14 +33,9 @@
           </div>
         </div>
   
-        <div class="item">
-          <img src="assets/img/slide/pro3.png" alt="Chicago" style="width:100%;">
-          <div class="carousel-caption">
-          </div>
-        </div>
       
         <div class="item">
-          <img src="assets/img/slide/slide3.jpg" alt="New York" style="width:100%;">
+          <img src="assets/img/slide/slide3.png" alt="New York" style="width:100%;">
           <div class="carousel-caption">
           </div>
         </div>
@@ -53,7 +47,7 @@
         </div>
 
         <div class="item">
-          <img src="assets/img/slide/slide5.jpg" alt="New York" style="width:100%;">
+          <img src="assets/img/slide/slide5.png" alt="New York" style="width:100%;">
           <div class="carousel-caption">
           </div>
         </div>

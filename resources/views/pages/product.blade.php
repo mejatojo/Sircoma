@@ -24,6 +24,9 @@
                                                     <img src="{{asset('storage/'.$product->photo_product)}}" alt="#" />
                                                 </div>
                                              <div class="col-3 description" style="margin:30px;margin-top:0" >
+                                                    <p style="float:right">
+                                                    {{$product->price}}
+                                                    </p>
                                                     <h2>{{$product->name_product}}</h2>
                                                     <p>{{$product->description_product}}</p>
                                                  </div>

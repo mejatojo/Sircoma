@@ -21,7 +21,7 @@ class categorieController extends Controller
         ->get();
         return view('pages.category',['categories'=>$categories]);
     }
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $path=$request->image->storeAs('public',strtotime(date('d-m-Y H:i:s')).".".$request->image->extension());
         $Category=Categorie::create(["photo"=>strtotime(date('d-m-Y H:i:s')).".".$request->image->extension()]);

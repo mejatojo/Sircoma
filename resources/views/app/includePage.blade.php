@@ -70,6 +70,12 @@
   <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  var listener=getEventListeners(window)
+console.log(listener)
+window.removeEventListener('click', ƒ)
+
+  </script>
   @yield('script')
   <!-- Template Main JS File -->
 

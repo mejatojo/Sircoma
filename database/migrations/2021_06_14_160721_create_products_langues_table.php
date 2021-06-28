@@ -21,6 +21,7 @@ class CreateProductsLanguesTable extends Migration
             $table->foreign('id_lang')->references('id')->on('langues')->onDelete('cascade');
             $table->string('name_product');
             $table->text('description_product');
+            $table->string('price');
             $table->timestamps();
         });
     }

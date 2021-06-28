@@ -55,6 +55,7 @@
                                     <option value="Historiques">Historiques</option>  
                                     <option value="Contact">Contact</option>
                                     <option value="Map">Map</option>
+                                    <option value="Clients">Clients</option>
                               </select>
                             </div>
                               <div style="float:right">

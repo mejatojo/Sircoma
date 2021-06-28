@@ -134,6 +134,7 @@
 
       </div> 
     </section><!-- End Partenaires Section -->
+  @include('pages.customers')
 @endsection
 @section('script')
 <script>

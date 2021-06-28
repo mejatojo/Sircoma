@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row"> 
 <div  class="card card-warning col-lg-6 offset-lg-3 col-md-12" style="margin-top:100px">
         <div class="card-header">
           <h3 class="card-title">Liste des langues
@@ -25,12 +25,16 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                          <form action="{{route('langues.store')}}" method="POST">
+                          <form action="{{route('langues.store')}}" method="POST" enctype="multipart/form-data">
                               @csrf
                               <div class="form-group">
                                 <label></label>
                                 <input type="text" name="lang" class="form-control">
                               </div>
+                              <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" class="form-control" name="drapeau">
+                            </div>
                               <div style="float:right">
                                   <button type="submit" class="btn btn-primary">Modifier</button>
                               </div>               
@@ -53,7 +57,7 @@
             <tbody>
               @foreach($langues as $langue)
               <tr>
-                <td>{{$langue->lang}}
+                <td>{{$langue->lang}} <img src="{{asset('storage/'.$langue->drapeau)}}" width="30px">
                               <span style="float:right">
                                   <a type="button" class="btn btn-tool" data-toggle="modal" data-target="#supprimer{{$langue->id}}"><i class="fa fa-trash"></i></a>
                               </span>
@@ -71,13 +75,17 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                          <form action="{{route('updateLang',[$langue->id])}}" method="POST">
+                          <form action="{{route('updateLang',[$langue->id])}}" method="POST" enctype="multipart/form-data">
                               @method('PUT')
                               @csrf
                               <div class="form-group">
                                 <label></label>
                                 <input type="text" name="lang" class="form-control" value="{{$langue->lang}}">
                               </div>
+                              <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" class="form-control" name="drapeau">
+                            </div>
                               <div style="float:right">
                                   <button type="submit" class="btn btn-primary">Modifier</button>
                               </div>               

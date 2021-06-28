@@ -42,7 +42,8 @@
                             <span hidden>{{$exist=1}}</span>
                               <span style="float:left">
                                <a style="color:rgb(89, 89, 231);font-weight:bold"><u>{{$langProduct->name_product}}</u></a>
-                               <br>{{$langProduct->description_product}}
+                               <br>{{$langProduct->description_product}}<br>
+                               Prix : {{$langProduct->price}}
                               </span>
                             
                               <span style="float:right">
@@ -72,6 +73,10 @@
                                         <label>Description</label>
                                         <textarea type="text" name="description_product" class="form-control" >{{$langProduct->description_product}}</textarea>
                                       </div>
+                                      <div class="form-group">
+                                        <label>Prix</label>
+                                        <input type="text" class="form-control" name="price" value="{{$langProduct->price}}">
+                                    </div>
                                       <input type="text" value="{{$langue->id}}" hidden name="id_lang">
                                       <input type="text" value="{{$product->id}}" hidden name="id_product">
                                       <div style="float:right">
@@ -112,6 +117,10 @@
                                         <label>Description</label>
                                         <textarea type="text" name="description_product" class="form-control" ></textarea>
                                       </div>
+                                      <div class="form-group">
+                                        <label>Prix</label>
+                                        <input type="text" class="form-control" name="price">
+                                    </div>
                                       <input type="text" value="{{$langue->id}}" hidden name="id_lang">
                                       <input type="text" value="{{$product->id}}" hidden name="id_product">
                                       <div style="float:right">

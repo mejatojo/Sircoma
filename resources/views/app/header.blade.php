@@ -21,12 +21,10 @@
                         </div>
                         <div class="top-area-block top-area-socials socials-colored-hover">
                            <div class="socials inline-inside"> 
-                              <a class="socials-item" href="#" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                              <a class="socials-item" href="#" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
-                              <a class="socials-item" href="#" target="_blank" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                           <span hidden>{{$Langue=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Langue')->get()}}</span>
+                                   @foreach($langues as $langue)
+                                   <img src="{{asset('storage/'.$langue->drapeau)}}" width="30px"  class="link" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer">
+                                   @endforeach
                            </div>
                         </div>
                      </div>
@@ -63,28 +61,11 @@
                         {{$prod[0]->libelle}}
                         @endif
                         </a></li>
-                        <li><a data-scroll href="/clients">
-                        <span hidden>{{$Clients=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Clients')->get()}}</span>
-                        @if (isset($Clients[0]->libelle))
-                        {{$Clients[0]->libelle}}
-                        @endif
-                        </a></li>
                         <li><a data-scroll href="/contact">
                         <span hidden>{{$Contact=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Contact')->get()}}</span>
                         @if (isset($Contact[0]->libelle))
                         {{$Contact[0]->libelle}}
                         @endif
-                        </a></li>
-                        <li><a data-scroll  class="dropdown">
-                        <span hidden>{{$Langue=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Langue')->get()}}</span>
-                        @if (isset($Langue[0]->libelle))
-                        {{$Langue[0]->libelle}}
-                        @endif
-                        <div class="dropdown-content" style="text-align:center">
-                                @foreach($langues as $langue)
-                                <p class="link" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer">{{$langue->lang}}</p>
-                                @endforeach
-                              </div>
                         </a></li>
                     </ul>
                 </div>

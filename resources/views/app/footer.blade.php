@@ -7,13 +7,13 @@
                   <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>  
                   <span hidden>{{$historiques=config('site_vars.sections')::where('reference','Historiques')->where('id_lang',$lang)->get()}}</span>
                      <h2 class="widget-title"><span>
-                         @if (isset($historiques[0]))
+                         @if (isset($historiques[0]->titre))
                          {{$historiques[0]->titre}}
                         @endif
                     </span></h2>
                      <div class="textwidget">
                         <a class="navbar-brand" href="/"><img src="{{asset('images/logo-2.png')}}" alt="image"></a>
-                        <p><?php if(isset($historiques[0])){echo $historiques[0]->paragraphe;}?></p>
+                        <p><?php if(isset($historiques[0]->paragraphe)){echo $historiques[0]->paragraphe;}?></p>
                      </div>
                   </div>
                </div>
@@ -21,22 +21,22 @@
                   <div class="widget widget_links">
                   <span hidden>{{$maps=config('site_vars.sections')::where('reference','Map')->where('id_lang',$lang)->get()}}</span>
                      <h2 class="widget-title"><span>
-                     @if (isset($historiques[0]))
+                     @if (isset($maps[0]->titre))
                      {{$maps[0]->titre}}
                     @endif</span></h2>
-                     <iframe frameborder="0" scrolling="no"  src="https://maps.google.com/maps?q=Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Rue de I Ambassade du Senegal, Nouakchott, Mauritanie" width="100%"></iframe>
+                     <iframe frameborder="0" scrolling="no"  src="https://maps.google.com/maps?q=Rue%20de%20I%20Ambassade%20du%20Senegal%2C%20Nouakchott%2C%20Mauritanie&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Rue de I Ambassade du Senegal, Nouakchott, Mauritanie" width="100%" height="185px"></iframe>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="widget widget_information">
                   <span hidden>{{$contact=config('site_vars.sections')::where('reference','Contact')->where('id_lang',$lang)->get()}}</span>
                      <h2 class="widget-title"><span>
-                         @if (isset($contact[0]))
+                         @if (isset($contact[0]->titre))
                          {{$contact[0]->titre}}
                         @endif</span></h2>
                      <ul>
                         <li class="address clearfix">
-                        <?php if(isset($historiques[0])){echo $contact[0]->paragraphe;}?>
+                        <?php if(isset($contact[0]->paragraphe)){echo $contact[0]->paragraphe;}?>
                         </li>
                      </ul>
                   </div>

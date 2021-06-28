@@ -16,7 +16,7 @@
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-hidden">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-hidden">
                            <div class="gem-contacts-item gem-contacts-phone">
-                              <a class="phone-icon" href="#" target="_blank" title="phone"><i class="fa fa-phone" aria-hidden="true"></i>+1 999-888-77-66</a>
+                              <a class="phone-icon" href="#" target="_blank" title="phone"><i class="fa fa-phone" aria-hidden="true"></i>+222 45 25 26 11</a>
                            </div>
                         </div>
                         <div class="top-area-block top-area-socials socials-colored-hover">

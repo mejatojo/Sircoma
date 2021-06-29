@@ -19,7 +19,7 @@
               @if($category->id_lang==$lang)
               <div  class="col-md-4 col-sm-12 col-xs-12" style="cursor:pointer">
                   <div class="row">
-                     <div class="service-widget link" link="{{$category->slug_category}}" style="box-shadow: 0 15px 25px -10px #000;margin-bottom:1cm;margin-right:1cm;">
+                     <div class="service-widget linking" linking="{{$category->slug_category}}" style="box-shadow: 0 15px 25px -10px #000;margin-bottom:1cm;margin-right:1cm;">
                         <div class="post-media wow fadeIn"  >
                           <img src="{{asset('storage/'.$category->photo)}}"  style="height:7cm" alt="img"   class="img-rounded">
                         </div>
@@ -36,12 +36,12 @@
     @section('script')
     <script>
       document.querySelectorAll('.nav li')[2].classList.add('active')
-        var links = document.querySelectorAll('.link')
+        var links = document.querySelectorAll('.linking')
         for(i=0;i<links.length;i++)
         {
             links[i].addEventListener('click',function()
             {
-                window.location="/products/"+this.getAttribute('link')
+                window.location="/products/"+this.getAttribute('linking')
             })
         }
     </script>

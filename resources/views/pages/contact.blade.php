@@ -87,7 +87,7 @@
     @endsection
     @section('script')
     <script>
-      document.querySelectorAll('.nav li')[4].classList.add('active')
+      document.querySelectorAll('.nav li')[3].classList.add('active')
     </script>
     <script>
 function myMap() {

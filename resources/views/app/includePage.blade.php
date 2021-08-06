@@ -30,7 +30,17 @@
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+ 
 <style>
+.activeLangue{
+    opacity : 1;
+}
+.nonActive{
+    opacity:0.5;
+}
+.link:hover{
+    opacity:1;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -71,10 +81,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-  var listener=getEventListeners(window)
-console.log(listener)
-window.removeEventListener('click', ƒ)
-
+$(window).off('click');
   </script>
   @yield('script')
   <!-- Template Main JS File -->

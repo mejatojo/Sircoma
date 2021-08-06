@@ -1163,9 +1163,6 @@ i.red {
     .container {
         width: 100%;
     }
-    body.building_version .header_style_01 {
-        padding-top: 15px !important;
-    }
     .big-tagline img {
         width: 100%;
     }

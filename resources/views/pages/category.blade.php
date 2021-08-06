@@ -17,9 +17,9 @@
         <div class="row text-center about-row">
             @foreach($categories as $category)
               @if($category->id_lang==$lang)
-              <div  class="col-md-4 col-sm-12 col-xs-12" style="cursor:pointer">
+              <div  class="col-md-4 col-sm-6 col-xs-12" style="cursor:pointer">
                   <div class="row">
-                     <div class="service-widget linking" linking="{{$category->slug_category}}" style="box-shadow: 0 15px 25px -10px #000;margin-bottom:1cm;margin-right:1cm;">
+                     <div class="service-widget linking" linking="{{$category->slug_category}}" style="box-shadow: 0 15px 25px -10px #000;margin: 0 2rem 2rem 2rem">
                         <div class="post-media wow fadeIn"  >
                           <img src="{{asset('storage/'.$category->photo)}}"  style="height:7cm" alt="img"   class="img-rounded">
                         </div>

@@ -20,11 +20,17 @@
                            </div>
                         </div>
                         <div class="top-area-block top-area-socials socials-colored-hover">
+                            <span hidden>{{$lang=Config::get('site_vars.lang')}}</span>
                            <div class="socials inline-inside"> 
                            <span hidden>{{$Langue=config('site_vars.menus')::where('id_lang',$_SESSION['lang'])->where('reference','Langue')->get()}}</span>
                                    @foreach($langues as $langue)
-                                   <img src="{{asset('storage/'.$langue->drapeau)}}" width="30px"  class="link" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer;height: 25px;
-    border-radius: 50%;">
+                                   @if($lang==$langue->id)
+                                   <img src="{{asset('storage/'.$langue->drapeau)}}" width="30px"  class="link activeLangue" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer;height: 25px;
+    border-radius: 50%;">   
+                                   @else
+                                   <img src="{{asset('storage/'.$langue->drapeau)}}" width="30px"  class="link nonActive" link="/changeLang/{{$langue->lang}}"  style="cursor:pointer;height: 25px;
+    border-radius: 50%;">  
+                                   @endif
                                    @endforeach
                            </div>
                         </div>

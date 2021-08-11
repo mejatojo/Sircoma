@@ -41,3 +41,4 @@ Route::get('/foo', function () {
     Artisan::call('storage:link');
     return 'link created';
 });
+Route::post('/email','pageController@email');
